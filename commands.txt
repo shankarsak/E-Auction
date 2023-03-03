@@ -1,0 +1,14 @@
+pip install django
+django-admin startproject E_Auction
+python manage.py runserver
+python manage.py migrate
+    Username (leave blank to use 'lenovo'): Shankar
+    Email address: shankar.sword.1@gmail.com
+    Password:E_Auction1
+    Username (leave blank to use 'lenovo'): Admin
+    Email address: admin@gmail.com
+    Password:Bidding@1
+*create views.py
+    *create functions as new site page
+Creted templetes and css file for frontend
+Creted app 'users'

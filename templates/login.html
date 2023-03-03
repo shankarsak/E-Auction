@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css" href="../static/css/login.css">
+    <title>Page::Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-box">
+            <div class="left"></div>
+                <div class="right">
+                    <form action="" method="post">{% csrf_token %}
+                    <h2>Bid now and grab more</h2>
+                    <input type="text" class="field" placeholder="User Name" name="un" required>
+                    <input type="password" class="field" placeholder="Your Password" name="pa" required>
+                    <input type="submit" class="btn" value="Login" name="login">
+                    <input type="reset" class="btn" value="Reset">
+                    <div class="niche">
+                        New User? <a href="/register">Register</a>
+                    </div>
+                    <a href="password-reset">Forgot Password?</a>
+                    </form>
+                </div>
+            </div> 
+        </div>            
+    </div>
+  <!--  <div class="head">
+        <h1>Login into your account. </h1>
+    </div>
+    <div class="container">
+        <form class="login_form">
+            <div class="box">
+            <label>Username:</label>
+            <input type="text" placeholder="User Name"></div>
+            <div><label>Password:</label>
+            <input type="text" placeholder="Password"></div>
+            <button class="btn">Login</button>
+        </form>
+        <a href="registration.html">New User, Register Here.</a>
+    </div> -->
+{% include 'footer.html' %}    
+</body>
+</html>

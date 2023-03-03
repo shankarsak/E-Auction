@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css" href="../static/css/registration.css">
+    <title>Page::Registration</title>
+</head>
+<body>
+        <div class="container">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                    <form action="" method="POST">{% csrf_token %}
+                        <h2>E-Auction</h2>
+                        <input type="text" class="field" placeholder="Enter First Name" name="fname" required>
+                        <input type="text" class="field" placeholder="Enter Last Name" name="lname" required>
+                        <input type="text" class="field"  placeholder="Enter Contact no" pattern="[1-9][0-9]{9}" name="contact" required>
+                        <input type="text" class="field" placeholder="Enter Username" name="name" required>
+                        <input type="email" class="field" placeholder="Enter Email-id" name="email" required>
+                        <input type="password" class="field" placeholder="Enter Password" name="p1" required>
+                        <input type="password" class="field" placeholder="Re Enter Password" name="p2" required>
+                        <input type="submit" class="btn" value="Submit">
+                        <input type="reset" class="btn" value="Reset">
+                    </form>
+                    Already registered, <a href="/login">Login here!</a>
+                </div>
+                {% for m in messages %}
+                <center><font color="red"><h2>{{m}}</h2></font></center>
+            {% endfor %}
+            </div>
+        </div>
+</body>
+</html>
